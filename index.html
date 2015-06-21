@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Starter Kit</title>
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <meta name="theme-color" content="#3372DF">
+    
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <!-- Page styles -->
+<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.2.0/flexboxgrid.min.css" type="text/css" >-->
+    <link rel="stylesheet" href="styles/ng-tags-input.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script src="scripts/ng-tags-input.js"></script>
+  </head>
+  <body>
+   <div class="container" ng-controller="mainController">
+   
+    <header class="app-header">
+     <div class="container-inner">
+     <section class="header-content">
+     <div class="st-humburger" onclick="toggle_visibility('foo');"></div>
+      <h1 class="logo"></h1>
+      <ul class="st-menu-header" id="foo">
+          <li>Пункт меню</li><span>48</span>
+          <li id="st-list">Выбранный пункт</li>
+      </ul>
+     
+     </section>
+       </div><!-- end container inner-->
+    </header>
+     <section class="just-do-it">
+        <div class="container-inner">
+        
+         <h2>Тестовое задание</h2>
+         <p>Ниже представлена часть интерфейса ЦУП (Центр управления продажами). 
+Кандидату предлагается сверстать адаптивный макет (HTML 5 + CSS 3) с поддержкой ретина-дисплеев и написать необходимый для его работы JS.</p>
+    </div><!-- end container inner-->
+     </section>
+
+          <section class="st-form-content">
+             <div class="container-inner">
+              <p class="st-content-target">Таргетирование анкеты по торговым точкам</p>
+             <div class="b-reg" ng-show="goCats1"> 
+              <div class="reg-wrap">
+                  <p>Регион:</p>
+                  
+              </div>
+            
+<ul class="tree">
+  <li>
+    <input type="checkbox" checked="checked" id="c1" />
+    <label class="tree_label" for="c1">Название большого региона</label>
+    <ul>
+      <li>
+        <input type="checkbox" checked="checked" id="c2" />
+        <label for="c2" class="tree_label">Регион поменьше</label>
+        <ul>
+          <li><input id="reg1" type="checkbox"><label for="reg1">Маленький регион</label></li>
+          <li><input id="reg2" type="checkbox"><label for="reg2">Еще один маленький регион</label></li>
+           <input type="checkbox" checked="checked" id="c3" />
+          <label for="c3" class="tree_label">Третий маленький регион</label>
+           <ul>
+               <li><input id="reg3" type="checkbox"><label for="reg3">Территория 1</label></li>
+               <li><input id="reg4" type="checkbox"><label for="reg4">Вторая территория</label></li>
+               <li><input id="reg5" type="checkbox"><label for="reg5">Еще одна территория</label></li>
+               <li><input id="reg6" type="checkbox"><label for="reg6">Четвертая</label></li>
+               <li><input id="reg7" type="checkbox"><label for="reg7">Последня территория</label></li>
+
+        </ul>
+          </li>
+        </ul>
+        <ul>
+            <li><input id="reg8" type="checkbox"><label for="reg8">Четвертый регион</label></li>
+        </ul>
+      </li>
+
+   <ul>
+            <li><input id="reg9" type="checkbox"><label for="reg9">Второй средний регион</label></li>
+        </ul>
+                  
+    </ul>
+   
+ 
+  </li>
+     <ul><li><input id="reg10" type="checkbox"><label for="reg10">Еще один большой регион</label></li></ul>
+     <ul><li><input id="reg11" type="checkbox"><label for="reg11">Третий большой регион</label></li></ul>
+ <div class="st-remove" ng-click="goCats1 = !goCats1"></div>
+</ul>
+ 
+    
+     <div class="st-choose-reg-descr">
+        <p>
+         Выберите один или<br> несколько регионов и/или<br> территорий, где будет<br> доступна анкета.
+        </p>
+     </div>
+      </div>
+           
+           <section class="b-reg" ng-show="goCats2">
+               <div>
+                  <p>Статус:</p>
+               </div>
+              <div class="select1-wrap">
+                   <select name="" id="">
+                       <option value="">Открыта</option>
+                       <option value="">Закрыта</option>
+                       <option value="">Для тебя закрыта</option>
+                   </select>
+                   <div class="st-remove" ng-click="goCats2 = !goCats2"></div>
+               </div>
+        <div class="st-width"></div>
+          
+           </section>
+           
+           <section ng-controller="MyCtrl" class="b-reg" ng-show="goCats3">
+            <div>
+              <p  class="f-min-width">Тип:</p>
+            </div>
+            <div class="t-min-width">
+                <tags-input ng-model="tags">
+                      <auto-complete source="loadTags($query)"></auto-complete>
+                </tags-input>
+                 <div class="st-remove" ng-click="goCats3 = !goCats3"></div>
+            </div>
+            <div class="st-width"></div>
+            </section>
+            
+      
+            <section class="b-reg regg" ng-show="goCats4">
+                <div>
+              <p  class="f-min-width">Параметр:</p>
+            </div>
+            <div class="select1-wrap select1-wrap-param">
+                   <select name="" id="">
+                       <option value="">равно</option>
+                       <option value="">1</option>
+                       <option value="">2</option>
+                       <option value="">3</option>
+                       <option value="">4</option>
+                   </select>
+                   <input type="text" placeholder="значение" class="select-wrap-val">
+                    <div class="st-remove" ng-click="goCats4 = !goCats4"></div>
+               </div>
+            <div class="st-width"></div>
+            </section>
+       
+            </div><!-- end container inner-->
+            
+            <section class="st-tag-icons">
+               <div class="container-inner">
+                   <div class="st-tags-choose">
+                       <span ng-click="goCats1 = !goCats1" class="class1" onclick="toggleClass(this)"><em class="i-global"></em>Регион и территория</span>
+                       <span ng-click="goCats2 = !goCats2" class="class1" onclick="toggleClass(this)"><em class="i-ckeck"></em>Статус</span>
+                       <span ng-click="goCats3 = !goCats3" class="class1" onclick="toggleClass(this)"><em class="i-tel"></em>Тип ТТ</span>
+                       <span ng-click="goCats4 = !goCats4" class="class1" onclick="toggleClass(this)" id="star"><em class="i-star"></em>Параметр</span>
+                       <div class="st-choose-reg-descr st-choose-reg-descr-tag">
+                     <p>
+                       Выберите критерии отбора вашей анкеты
+                    </p>
+                  </div>
+                   </div>
+                   
+                </div><!-- end container inner-->
+            </section>
+         
+            <footer>
+                <div class="container-inner">
+                   <section class="footer-info">
+                    <div class="st-copyright">
+                        <p>&copy; &laquo;Первый Бит&raquo;, 2014</p>
+                    </div>
+                    <div>
+                        <ul class="footer-info-contact">
+                            <li><a href="#">Контактная информация</a></li>
+                            <li><a href="#">Тех.поддержка</a></li>
+                            <li><a href="#">Новости</a></li>
+                        </ul>
+                    </div>
+                    </section>
+                </div>
+            </footer>
+          </section>
+    </div>
+
+    <!-- build:js(app/) ../../scripts/main.min.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+   <script>
+      
+ function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'flex')
+          e.style.display = 'none';
+       else
+          e.style.display = 'flex';
+} 
+   function toggleClass(el){
+        if(el.className == "class1"){
+            el.className = "class2";
+        } else {
+            el.className = "class1";
+        }
+}   
+//   var test = document.getElementById('star');
+//   var test2 = document.getElementById('st-list');
+//       
+//       
+//       star.onclick = function(a,b,c) {
+//           test2.innerText = this.innerText;
+//       }
+   </script>
+    <!-- Built with love using Web Starter Kit -->
+  </body>
+</html>
